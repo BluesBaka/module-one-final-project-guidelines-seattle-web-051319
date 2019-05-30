@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :rounds, through: :questions
-
+  has_many :rounds
+  has_many :questions, through: :rounds
 end
