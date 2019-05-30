@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 class CreateQuestions < ActiveRecord::Migration[5.0]
+=======
+class CreateTableQuestions < ActiveRecord::Migration[5.0]
+>>>>>>> CLI
   def change
     create_table :questions do |t|
       t.string :category
