@@ -1,13 +1,44 @@
-##Needs to show a welcome screen
 
-##Needs to ask if the user would like to play
+class UserInterface
+  def welcome
+    puts "Welcome"
+    puts "You don't know ART"
+    clear
+    sleep[1]
+    puts "What's your name?"
+    new_user
+  end
 
-##Needs to provide a selection of options
+  def new_user
+    users_input
+    #if no user exists
+    User.new.create(username)
+  end
 
-##Needs to take in the users correct_answer
 
-##Needs to display if the answer was correct or not
+  def users_input
+    gets.chomp
+  end
 
-##display user record of wins
+  def display_question(question)
+    puts question
+  end
 
-##invite to play another round or quit
+  def game_play
+
+    puts "Would you like to play a couple rounds? Y/N"
+    users_input
+    if users_input == "Y"
+      display_question
+
+  end
+
+  def run
+    welcome
+
+    loop do
+      # the main game
+    end
+  end
+end
+

@@ -1,4 +1,6 @@
 require 'bundler'
+require 'rest-client'
+require 'json'
 Bundler.require
 
 ActiveRecord::Base.establish_connection(
@@ -6,5 +8,5 @@ ActiveRecord::Base.establish_connection(
   database: 'db/development.db')
 
 
-require_relative '../bin/run'  
-require_all 'lib'
+require_all './lib'
+
