@@ -6,8 +6,6 @@ class UserInterface
     sleep[1]
     puts "What's your name?"
     new_user
-    sleep[1]
-    puts "Would you like to play a couple rounds?"
   end
 
   def new_user
@@ -25,6 +23,14 @@ class UserInterface
     puts question
   end
 
+  def game_play
+
+    puts "Would you like to play a couple rounds? Y/N"
+    users_input
+    if users_input == "Y"
+      display_question
+
+  end
 
   def run
     welcome

@@ -13,9 +13,9 @@ require 'json'
 #   ]
 # }
 
-json.users.each do |user|
+json.question.each do |user|
   # user = {username: ''}
-  User.create(user)
+  Question.create(question)
 end
 
 # complicated hashketball:
@@ -28,7 +28,9 @@ json["results"].each do |obj|
 
   correct = obj["correct_answer"]
   inc1 = obj["incorrect_answers"][0]
-  ...
+  inc2 = obj["incorrect_answers"][1]
+  inc3 = obj["incorrect_answers"][2]
+
 
   Question.create(
     correct: correct,
