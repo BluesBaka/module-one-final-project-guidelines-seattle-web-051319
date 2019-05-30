@@ -1,3 +1,4 @@
+
 class UserInterface
   def welcome
     puts "Welcome"
