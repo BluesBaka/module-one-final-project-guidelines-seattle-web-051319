@@ -1,3 +1,4 @@
+
 class UserInterface
   def welcome
     puts "Welcome"
@@ -8,8 +9,6 @@ class UserInterface
     new_user
   end
 
-<<<<<<< HEAD
-=======
   def new_user
     users_input
     #if no user exists
@@ -42,5 +41,3 @@ class UserInterface
     end
   end
 end
-
->>>>>>> 93f584ee76ba472f7bb08660159f114c98160d5d

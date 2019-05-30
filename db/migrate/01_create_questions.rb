@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 class CreateQuestions < ActiveRecord::Migration[5.0]
+=======
+
+
+class CreateQuestions < ActiveRecord::Migration[5.0]
+
+>>>>>>> f3c14b8da79524e1cded6db2f5c8e2b9be81029d
   def change
     create_table :questions do |t|
       t.string :category
