@@ -1,4 +1,4 @@
-class CreateRounds < ActiveRecord::Migration[5.0]
+class CreateRounds < ActiveRecord::Migration[5.2]
 
   def change
     create_table :rounds do |t|
