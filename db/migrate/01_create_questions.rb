@@ -1,11 +1,11 @@
-class CreateTableQuestions < ActiveRecord::Migration[5.2]
+class CreateQuestions < ActiveRecord::Migration[5.0]
   def change
-    create_table :questions do |t| 
+    create_table :questions do |t|
       t.string :category
-      t.string :type 
-      t.string :difficulty 
+      t.string :type
+      t.string :difficulty
       t.string :question
-      t.string :correct 
+      t.string :correct
       t.string :incorrect1
       t.string :incorrect2
       t.string :incorrect3
