@@ -7,6 +7,6 @@ ActiveRecord::Base.logger = nil
 
 system('clear')
 
-welcome
-user_id = process_user
-play(user_id)
+# welcome
+# # user_id = process_user
+# # play(user_id)
