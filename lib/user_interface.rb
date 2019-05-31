@@ -72,7 +72,8 @@ class UserInterface
       is_running = false
     elsif response =="y"
       # binding.pry
-      question = Question.find_by(id: 8)
+      question = Question.all[0..14].sample
+      binding.pry
       Round.create(user: @current_user, question: question)
       display_question(question)
       end
