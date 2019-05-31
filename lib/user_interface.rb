@@ -4,6 +4,7 @@ class UserInterface
   attr_accessor :current_user
   def initialize(current_user=nil)
     @current_user = current_user
+    
   end
 
   def run
@@ -84,12 +85,13 @@ class UserInterface
       if quiz_response == 1
           puts "Yay! You know ART"
               points += 1
-
+              # Round.points
+              binding.pry
          else quiz_response == 2
 
           puts "Hmmm, do you think so?"
           puts "Try another round."
-          binding.pry
+          # binding.pry
       end
     end
     end
