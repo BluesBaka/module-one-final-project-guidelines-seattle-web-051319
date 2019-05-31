@@ -23,7 +23,7 @@ class UserInterface
     system("clear")
     puts "You're in an art trivia game! "
     puts "Answer questions from the prompt."
-    puts "If you'd like to quit, press q."
+    puts
     puts
     puts "What's your name?"
     users_input
@@ -54,12 +54,13 @@ class UserInterface
     puts
     # binding.pry
     puts "Question: #{question.question}"
+    puts
     puts "1.#{question.correct}"
     puts "2.#{question.incorrect1}"
     puts "3.#{question.incorrect2}"
     puts "4.#{question.incorrect3}"
     puts
-    puts
+    puts "Enter your answer 1-4"
   end
 
   def game_play
@@ -69,7 +70,7 @@ class UserInterface
     puts "Would you like to play a round? Y/N"
     response = STDIN.gets.chomp.downcase
     if response == "n"
-      puts "fine, begone with you"
+      puts "Fine, begone with you -- phillistine, go burn a library or something."
       is_running = false
     elsif response =="y"
 
@@ -82,12 +83,13 @@ class UserInterface
       # binding.pry
       if quiz_response == 1
           puts "Yay! You know ART"
-              # points ++
+              points += 1
 
          else quiz_response == 2
 
           puts "Hmmm, do you think so?"
           puts "Try another round."
+          binding.pry
       end
     end
     end
