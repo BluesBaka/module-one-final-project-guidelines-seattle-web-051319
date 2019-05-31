@@ -53,30 +53,43 @@ class UserInterface
     puts
     puts
     # binding.pry
-    puts question.question
-    puts question.correct
-    puts question.incorrect1
-    puts question.incorrect2
-    puts question.incorrect3
+    puts "Question: #{question.question}"
+    puts "1.#{question.correct}"
+    puts "2.#{question.incorrect1}"
+    puts "3.#{question.incorrect2}"
+    puts "4.#{question.incorrect3}"
     puts
     puts
   end
 
   def game_play
     is_running = true
+    points = 0
     while is_running
-    puts "Would you like to play a couple rounds? Y/N"
+    puts "Would you like to play a round? Y/N"
     response = STDIN.gets.chomp.downcase
     if response == "n"
       puts "fine, begone with you"
       is_running = false
     elsif response =="y"
+
       # binding.pry
       question = Question.all[0..14].sample
-      binding.pry
+      # binding.pry
       Round.create(user: @current_user, question: question)
       display_question(question)
+      quiz_response = STDIN.gets.chomp.to_i
+      # binding.pry
+      if quiz_response == 1
+          puts "Yay! You know ART"
+              # points ++
+
+         else quiz_response == 2
+
+          puts "Hmmm, do you think so?"
+          puts "Try another round."
       end
+    end
     end
   end
 
